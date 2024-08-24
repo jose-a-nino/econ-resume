@@ -1,0 +1,493 @@
+
+%-------------------------
+% CV: Jose Nino
+%------------------------
+
+%-------------------------
+% Sources:
+%   Resume in Latex
+%     Author : Aras Gungore
+%     License : MIT
+%   [University of Pennsylvania](https://cdn.uconnectlabs.com/wp-content/uploads/sites/74/2019/08/CV-economics-sample.pdf)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome5}
+\usepackage{wasysym}
+\usepackage{changepage} % adjust margin for part of text
+\input{glyphtounicode}
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\Item}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\smallbullet}{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ }
+
+
+\newcommand{\Subheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, #2 & #3 \\
+      \small#4 \\
+    \end{tabular*}\\
+}
+
+
+\newcommand{\SubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\HeaderItems}[6]{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l}
+      #1 & #3 \\
+      #2 & #4 \\
+      #5 & #6 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\EducationHeading}[7]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      % School, location, graduation date
+      \textbf{#1,} #2 & #3 \\
+      % Degree, GPA
+      {\small#4} \vspace{5pt} \\
+      % Thesis title
+      \textit{\small\href{#6}{#5}}\vspace{-7pt}
+    \end{tabular*}
+    % Thesis abstract
+    \begin{itemize}
+      \item \small#7
+    \end{itemize}
+}
+
+
+\newcommand{\ProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\OrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\SubItem}[1]{\Item{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\SubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\SubHeadingListEnd}{\end{itemize}}
+\newcommand{\ItemListStart}{\begin{itemize}}
+\newcommand{\ItemListEnd}{\end{itemize}}
+
+\newcommand{\ProjectTitle}[1]{\textit{\small #1} \vspace{-7pt}}
+\newcommand{\ProjectDescription}[1]{\vspace{3.5pt} \begin{adjustwidth}{7pt}{0pt} \small#1 \end{adjustwidth}}
+
+\newcommand{\PaperTitle}[1]{\item \textbf{#1} \vspace{-7pt} }
+\newcommand{\PaperTitleLinks}[2]{\item \textbf{#1} $|$ #2 \vspace{-7pt} }
+\newcommand{\PaperTitleAuthor}[2]{\item \noindent \textbf{#1} #2 }
+
+
+
+%-------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge Jose Nino} \\
+\end{center}
+
+\HeaderItems
+  { \hspace{-4.4pt} {\large \phone} \href{tel:6412606902}{(641) 260-2602} }
+  { \faEnvelope \hspace{1pt} \href{mailto:j.nino506@gmail.com}{j.nino506@gmail.com} }
+  { \hspace{-4.2pt}\hspace{1pt} \faLinkedin \hspace{-1.2pt}\hspace{3pt} \href{https://www.linkedin.com/in/cheyennequijano}{linkedin.com/in/cheyennequijano} }
+  { \faGithub \hspace{1pt} \href{https://github.com/cheyennequijano}{github.com/cheyennequijano} }
+  { \hspace{-3pt}\hspace{1pt} {\small \faMapMarker} \hspace{-1.8pt}\hspace{1pt} \href{https://www.google.com/maps/place/Board+of+Governors+of+the+Federal+Reserve+System/@38.8936667,-77.0460803,18.65z/data=!4m6!3m5!1s0x89b7b7a5ff607921:0xcb9fc5f71f1038f9!8m2!3d38.8933102!4d-77.0458087!16s\%2Fg\%2F1tjyvhcj?entry=ttu}{Washington, D.C.} }
+  { {\small \faLink} \href{https://www.cheyennequijano.com}{www.cheyennequijano.com} }
+
+
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \SubHeadingListStart
+    
+    \EducationHeading
+    {Duke University} {Durham, North Carolina}{Aug 2018 \textbf{-} May 2022}
+    {Bachelor of Science with Distinction in Economics, Minor in Mathematics} 
+    {Honors Thesis: ``A Perfect Storm: The Effect of Natural Disasters on Child 
+      Health''}{https://dukespace.lib.duke.edu/dspace/handle/10161/25559}
+    {Advised by Erica Field and Michelle Connolly, I examine the effects of 
+    flooding on diarrhea and acute respiratory infection after Typhoon Labuyo 
+    in the Philippines. Using ArcGIS and NASA satellite data, I identified each 
+    household's distance from the nearest flooded area. I constructed a spatial 
+    regression discontinuity design, comparing children exposed to flooding to 
+    children living just outside the flood border. My research contributed a 
+    novel flooding measure, as previous studies relied on government reports.}
+
+  \SubHeadingListEnd
+
+
+
+%----------- RELEVANT COURSEWORK & SKILLS -----------
+
+\section{Relevant Coursework and Skills}
+  \vspace{2pt}
+  \SubHeadingListStart
+    \small{\item{
+        \textbf{Economics: }{Econometrics and Data Science, Economics of Global 
+            Health, Labor and Family Economics, Intermediate Microeconomics, 
+            Intermediate Macroeconomics, Economics of Entrepreneurship, Global 
+            Domestic Policy}
+            
+        \textbf{Mathematics: }{Real Analysis, Mathematical Statistics, Ordinary 
+          and Partial Differential Equations, Linear Algebra and Differential 
+          Equations, Probability, Multivariable Calculus}
+
+        \textbf{Computer Science: }{Data Structures and Algorithms, 
+          Introduction to Computer Science}
+
+        \textbf{Programming Languages: }{Python, R, Stata, HTML, CSS, 
+          JavaScript, Java, Julia, MATLAB}
+    }}
+  \SubHeadingListEnd
+
+
+
+%----------- RESEARCH INTERESTS -----------
+
+  \section{Research Interests}
+  \vspace{3pt}
+  \SubHeadingListStart
+  
+  \small{\item{
+      Development Economics, Economics of Crime, Economics of Corruption, and 
+      Economic Development
+  }}
+
+  \SubHeadingListEnd
+
+
+
+%----------- PROJECTS -----------
+
+\section{Works in Progress}
+    \vspace{3pt}
+    \SubHeadingListStart
+      
+      \PaperTitleLinks{``The Effect of Deportations on Crime''}{\href{https://github.com/cheyennequijano/deportations-crime}{\color{blue}GitHub}}
+        \ItemListStart
+          \Item{I propose that the little evidence of 
+            any reduction in crime in response to deportation policies stems 
+            from heterogeneous effects on various crime types. My plan involves 
+            conducting an event study to examine different responses of crime 
+            types over time following the enactment and dissolution of the 
+            Secure Communities program in the U.S. The empirical results will 
+            serve as a foundation for developing an extended labor market 
+            search and matching model incorporating Becker's (1974) model of 
+            crime to identify any changes in legal and criminal employment 
+            following the policy.}
+        \ItemListEnd
+      \PaperTitleAuthor{``The Role of Industrial Policy: Evidence from China's Semiconductor Industry''}
+        {with Colin Caines (Federal Reserve), Sharon Jeon (Federal Reserve), 
+        and Eva Van Leemput (Federal Reserve)}
+      \PaperTitleAuthor{``Limitations of the Income Pooling Hypothesis''}
+        {with \'{A}ngel Garc\'{i}a-Lascurain Fern\'{a}ndez (Arizona State 
+        University), Marjorie McElroy (Duke University), and Ziyuan Wang 
+        (University of British Columbia)}
+
+    \SubHeadingListEnd
+
+
+
+%----------- RESEARCH EXPERIENCE -----------
+
+\section{Research Experience}
+  \vspace{3pt}
+  \SubHeadingListStart
+
+    \Subheading
+      {Federal Reserve Board of Governors}{Washington, District of Columbia}{Jul 2022 \textbf{-} Present}
+      {Research Assistant}
+      \ProjectTitle{Illegal Commodities and the Business Cycle}
+        \ItemListStart
+          \Item{The Illegal Commodities and the Business Cycle project 
+            investigates the effects of legal and illegal commodity (cocaine) 
+            price changes on the business cycle in Latin America. Under 
+            Mar\'{i}a Aristiz\'{a}bal-Ram\'{i}rez, I coded cumulative 
+            orthogonal IRFs in Stata and sourced domestic activity data for the 
+            studied countries. This involved extensive searches across various 
+            sources, including current literature and official websites in 
+            Spanish. To ensure comprehensive data coverage, I explored 
+            alternate sources, such as using employee and wage data to 
+            construct average wages.}
+        \ItemListEnd
+
+      \vspace{0.4cm}
+
+      \ProjectTitle{The Impact of China's Demographic Cliff on Outward Investments}
+        \ItemListStart
+          \Item{The Impact of China's Demographic Cliff on Outward Investments 
+            project quantifies the impact of demographic changes on growth in 
+            China. Under Colin Caines, Fran\c{c}ois de Soyres, and \'{E}tienne 
+            Gagnon, I primarily implement the overlapping generations model 
+            code in Julia. By conducting thorough searches on the Chinese 
+            statistical agency's websites, I sourced crucial data that had not 
+            been used in the existing literature. I also contributed to 
+            discussions on refining the China OLG model, deciding on features 
+            to retain from the U.S. model and new incorporations.}
+        \ItemListEnd
+
+      \ProjectTitle{The Role of Industrial Policy: Evidence from China's Semiconductor Industry}
+        \ItemListStart
+          \Item{The Role of Industrial Policy Planning project assesses the 
+            impact of industrial policy on economic growth and future 
+            innovation, focusing on China's semiconductor industry. My primary 
+            responsibilities involve cleaning large datasets, crafting charts 
+            to highlight relevant stylized facts, and contributing to the 
+            writing process with Colin Caines and Eva Van Leemput. I play a key 
+            role in organizing ideas, identifying crucial charts and results, 
+            and, during the drafting and refining stages, suggesting potential 
+            new data sources and ways to enhance our data presentation for a 
+            more robust analysis. }
+        \ItemListEnd
+    
+    \Subheading
+    {DevLab}{Durham, North Carolina}{Aug 2021 \textbf{-} May 2022}
+    {Research Assistant}
+      \ProjectTitle{COVID-19 and Household Well-Being in Developing Countries}
+      \ItemListStart
+        \Item{The COVID-19 and Household Well-Being in Developing Countries 
+          project investigates corruption in the trade of essential medical 
+          supplies during the COVID-19 pandemic. Under Erica Field and Erik 
+          Wibbels, I used Python to apply methods from the illicit financial 
+          flows literature to quantify and visualize price gaps in import and 
+          export data across Comtrade country transactions. By identifying 
+          significant price disparities across transit countries, my results 
+          directed us to explore the drivers behind why these countries were 
+          particularly corrupt in medical supplies. }
+      \ItemListEnd
+
+    \vspace{-14pt}
+
+    \Subheading
+    {Environmental Justice Lab}{Durham, North Carolina}{May 2021 \textbf{-} May 2022}
+    {Research Assistant}
+      \ProjectTitle{Residential Location and Segregation}
+      \ItemListStart
+        \Item{The Residential Location and Segregation project assesses racial 
+          discrimination in the U.K. housing market. Under Christopher Timmins 
+          and Amy Binner, I collaborated with other research assistants to 
+          design, test, and deploy a program that scrapes rental listings and 
+          sends inquiries to realtors from different racial backgrounds. I 
+          integrated economic design into the project by addressing a potential 
+          endogeneity issue in random assignment and implementing improvements. 
+          I also included a crucial tracking feature that aided data recovery, 
+          restoring over 300 observations for analysis. }
+      \ItemListEnd
+    
+      \Subheading
+    {McElroy Labor Lab}{Durham, North Carolina}{Feb 2021 \textbf{-} May 2022}
+    {Research Assistant}
+    \ProjectTitle{Limitations of the Income Pooling Hypothesis}
+      \ItemListStart
+        \Item{The Limitations of the Income Pooling Hypothesis project argues 
+          that the hypothesis falls short, citing inconclusive results across 
+          theoretical labor economics papers. I identified the models' 
+          hypothesis tests and results, contributed to discussions, and crafted 
+          a narrative around the findings. }
+      \ItemListEnd
+    \ProjectTitle{Joint Determination of Labor and Marriage Market Outcomes}
+      \ItemListStart
+        \Item{The Joint Determination of Labor and Marriage Market Outcomes 
+          project proposes that the labor and marriage markets are jointly 
+          determined. I constructed instruments for the marriage market 
+          equations and coded the 3SLS, 2SLS, reduced form, and OLS estimates 
+          for the model in Stata.}
+      \ItemListEnd
+
+  \SubHeadingListEnd
+
+
+
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+\section{Awards \& Achievements}
+\vspace{2pt}
+\SubHeadingListStart
+  \small{\item{
+      \textbf{Horey Family Scholarship: }{Awarded to promising undergraduate 
+        women in economics.}
+
+      \textbf{Women's Impact Network Scholarship: }{Awarded to undergraduate 
+        women who demonstrate leadership qualities.}
+  
+      \textbf{Facebook Above \& Beyond Computer Science Program: }{Selected 
+        to participate in a 10-week coding workshop series with Facebook 
+        engineers.}
+  }}
+\SubHeadingListEnd
+
+
+
+%----------- TEACHING EXPERIENCE  -----------
+
+\section{Teaching Experience}
+  \SubHeadingListStart
+    
+    \Subheading
+    {Research Assistant Technical Training}{Washington, District of Columbia}{Jun 2023 \textbf{-} Sep 2023}
+    {Lecturer and Teaching Assistant}
+      \vspace{-10pt}
+      \ItemListStart
+        \Item{I taught 8 lectures on various programming languages to 
+        new research assistants at the Federal Reserve, revised existing 
+        materials for clarity, and designed new coding exercises to reinforce 
+        comprehension.}
+      \ItemListEnd
+  
+  \SubHeadingListEnd
+
+
+
+%----------- ADDITIONAL ACTIVITIES  -----------
+
+\section{Additional Activities}
+  \SubHeadingListStart
+    
+    \Subheading
+    {Federal Reserve Education Outreach (FedEd)}{Washington, District of 
+    Columbia}{Jan 2023 \textbf{-} Present}
+    {Leadership Team Member}
+      \vspace{-10pt}
+      \ItemListStart
+        \Item{FedEd is a research assistant-led program that provides high 
+          school students from underrepresented backgrounds exposure to 
+          economics through school presentations on various topics. I revise 
+          existing materials for better understanding and devise new lectures 
+          on current research. Additionally, I am organizing a speaker series 
+          at the Federal Reserve that features a presentation on how to think 
+          like an economist, a fireside chat with division directors, and a 
+          Q\&A session where research assistants will share insights from their 
+          career journeys in economics.}
+      \ItemListEnd
+
+    \SubHeadingListEnd
+
+
+
+%----------- HOBBIES -----------
+
+\section{Hobbies}
+  \SubHeadingListStart
+    \small{\item{Running (Half-Marathon, Sprint Triathlon), Figure Skating, 
+      Taekwondo, A Capella}}
+  \SubHeadingListEnd
+
+
+
+%----------- REFERENCES -----------
+
+\section{References}
+
+  \SubHeadingListStart
+    \item{
+      Dr. Christopher Timmins \\
+      Gary J. Gorman Affordable Housing Professor \\
+      The Wisconsin School of Business \\
+      Email: \href{mailto:ctimmins@wisc.edu}{ctimmins@wisc.edu} \\
+    }
+    \item{
+      Dr. Erica Field \\
+      Professor of Economics \\
+      Duke University \\
+      Email: \href{mailto:emf23@duke.edu}{emf23@duke.edu} \\
+    }
+    \item{
+      Dr. Eva Van Leemput \\
+      Chief \\
+      Federal Reserve Board of Governors \\
+      Email: \href{mailto:eva.vanleemput@frb.gov}{eva.vanleemput@frb.gov} \\
+    }
+    \item{
+      Dr. Mar\'{i}a Aristiz\'{a}bal-Ramirez \\
+      Economist \\
+      Federal Reserve Board of Governors \\
+      Email: \href{mailto:maria.aristizabalramirez@frb.gov}{maria.aristizabalramirez@frb.gov} \\
+    }
+  \SubHeadingListEnd
+
+
+
+%-------------------------------------------
+
+\end{document}
